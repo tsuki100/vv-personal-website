@@ -8,7 +8,7 @@ export default function Home() {
         <div className="flex flex-col items-center text-center">
           <div className="w-32 h-32 rounded-full overflow-hidden mb-8">
             <Image
-              src="/avatar.jpg"
+              src="/avatar.jpeg"
               alt="vv的个人头像"
               width={128}
               height={128}
@@ -45,8 +45,9 @@ export default function Home() {
         </h2>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            2001年7月28日出生，热爱编程和技术创新。专注于全栈开发，擅长解决复杂问题，追求代码质量和用户体验。
-            在工作中注重团队协作，善于沟通，乐于分享技术经验。
+            2001年7月28日出生，清华大学计算机系在读。热爱编程和技术创新，专注于全栈开发。
+            擅长解决复杂问题，追求代码质量和用户体验。在工作中注重团队协作，善于沟通，乐于分享技术经验。
+            喜欢探索新技术，享受编程带来的乐趣。热爱生活，热爱创造，热爱make love。
           </p>
         </div>
       </section>
