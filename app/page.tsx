@@ -13,13 +13,14 @@ export default function Home() {
               width={128}
               height={128}
               className="object-cover"
+              priority
             />
           </div>
           <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             vv
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            全栈开发工程师 / 技术探索者
+            材料学研究者 / 高分子材料专家
           </p>
           <div className="flex gap-4">
             <a
@@ -45,9 +46,9 @@ export default function Home() {
         </h2>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            2001年7月28日出生，清华大学计算机系在读。热爱编程和技术创新，专注于全栈开发。
-            擅长解决复杂问题，追求代码质量和用户体验。在工作中注重团队协作，善于沟通，乐于分享技术经验。
-            喜欢探索新技术，享受编程带来的乐趣。热爱生活，热爱创造，热爱make love。
+            2001年7月28日出生，郑州大学材料学专业在读。专注于高分子材料研究，对光电高分子材料有深入研究。
+            擅长材料性能测试与表征，追求材料性能的极致优化。在实验室工作中注重团队协作，善于沟通，乐于分享研究经验。
+            热爱探索新材料，享受科研带来的成就感。
           </p>
         </div>
       </section>
@@ -55,43 +56,43 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="container mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-          技能专长
+          专业领域
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">前端开发</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">高分子合成</h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>HTML5 / CSS3</li>
-              <li>JavaScript / TypeScript</li>
-              <li>React / Next.js</li>
-              <li>Tailwind CSS</li>
+              <li>自由基聚合</li>
+              <li>缩聚反应</li>
+              <li>活性聚合</li>
+              <li>共聚物制备</li>
             </ul>
           </div>
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">后端开发</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">材料表征</h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Node.js</li>
-              <li>Python</li>
-              <li>Java</li>
-              <li>数据库设计</li>
+              <li>热分析</li>
+              <li>光谱分析</li>
+              <li>显微分析</li>
+              <li>力学性能测试</li>
             </ul>
           </div>
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">开发工具</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">应用领域</h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Git</li>
-              <li>Docker</li>
-              <li>VS Code</li>
-              <li>Linux</li>
+              <li>光电材料</li>
+              <li>生物材料</li>
+              <li>智能材料</li>
+              <li>复合材料</li>
             </ul>
           </div>
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">其他技能</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">研究技能</h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>敏捷开发</li>
-              <li>团队协作</li>
-              <li>问题解决</li>
-              <li>技术写作</li>
+              <li>实验设计</li>
+              <li>数据分析</li>
+              <li>文献调研</li>
+              <li>论文写作</li>
             </ul>
           </div>
         </div>
@@ -100,43 +101,43 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="container mx-auto px-4 py-20 bg-gray-50 dark:bg-gray-800">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-          项目经历
+          研究项目
         </h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">个人网站</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">光电高分子材料研究</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                使用Next.js和Tailwind CSS构建的响应式个人网站，支持暗色模式。
+                研究新型光电高分子材料的合成与性能优化，重点关注其在显示器件中的应用。
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">
-                  Next.js
+                  材料合成
                 </span>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">
-                  TypeScript
+                  性能表征
                 </span>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">
-                  Tailwind CSS
+                  器件制备
                 </span>
               </div>
             </div>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">在线学习平台</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">智能高分子材料开发</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                全栈开发的在线教育平台，支持课程管理、视频播放和用户互动。
+                开发对外部刺激响应的智能高分子材料，包括温敏、光敏、pH敏感等性能研究。
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">
-                  React
+                  智能材料
                 </span>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">
-                  Node.js
+                  响应机理
                 </span>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">
-                  MongoDB
+                  应用研究
                 </span>
               </div>
             </div>
@@ -151,7 +152,7 @@ export default function Home() {
         </h2>
         <div className="max-w-xl mx-auto text-center">
           <p className="text-gray-600 dark:text-gray-300 mb-8">
-            如果您对我的工作感兴趣，欢迎通过以下方式联系我：
+            如果您对我的研究感兴趣，欢迎通过以下方式联系我：
           </p>
           <div className="flex justify-center gap-6">
             <a
