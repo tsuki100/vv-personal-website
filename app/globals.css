@@ -53,6 +53,18 @@ body {
   }
 }
 
+@keyframes tiltFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
 .animate-float {
   animation: float 8s ease-in-out infinite;
 }
@@ -61,10 +73,29 @@ body {
   animation: pulse 6s ease-in-out infinite;
 }
 
+.animate-tilt-float {
+  animation: tiltFloat 3s ease-in-out infinite;
+}
+
 .animation-delay-2000 {
   animation-delay: 2s;
 }
 
 .animation-delay-4000 {
   animation-delay: 4s;
+}
+
+.parallax {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.floating-card {
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.floating-card:hover {
+  transform: translateY(-5px);
 }
