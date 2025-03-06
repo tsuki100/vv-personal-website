@@ -2,46 +2,68 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 relative overflow-hidden">
+      <section className="container mx-auto px-4 py-20 relative min-h-[600px]">
         {/* 装饰性背景元素 */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-10 left-1/4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-          <div className="absolute top-0 right-1/4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-1/3 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute inset-0 overflow-hidden">
+          {/* 主要圆形 */}
+          <div className="absolute top-20 left-20 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-80 animate-float"></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-80 animate-float animation-delay-2000"></div>
+          <div className="absolute bottom-20 left-1/2 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-80 animate-float animation-delay-4000"></div>
+          
+          {/* 小装饰圆形 */}
+          <div className="absolute top-10 right-1/3 w-32 h-32 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse-slow"></div>
+          <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-green-200 rounded-full mix-blend-multiply filter blur-lg opacity-60 animate-pulse-slow animation-delay-2000"></div>
+          <div className="absolute top-1/2 right-1/4 w-28 h-28 bg-orange-200 rounded-full mix-blend-multiply filter blur-lg opacity-60 animate-pulse-slow animation-delay-4000"></div>
+          
+          {/* 装饰线条 */}
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-200 to-transparent opacity-40"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-200 to-transparent opacity-40"></div>
         </div>
 
-        <div className="flex flex-col items-center text-center relative">
-          <div className="w-32 h-32 rounded-full overflow-hidden mb-8 ring-4 ring-white shadow-lg">
-            <Image
-              src="/avatar.jpeg"
-              alt="vv的个人头像"
-              width={128}
-              height={128}
-              className="object-cover"
-              priority
-            />
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 relative h-full">
+          {/* 左侧个人信息 */}
+          <div className="flex-1 text-left z-10">
+            <h1 className="text-5xl font-bold mb-6 text-gray-900 dark:text-white bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              vv
+            </h1>
+            <p className="text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              材料学研究者 / 高分子材料专家
+            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-xl">
+              专注于高分子材料研究，对光电高分子材料有深入研究。擅长材料性能测试与表征，追求材料性能的极致优化。
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="#about"
+                className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-lg"
+              >
+                了解更多
+              </a>
+              <a
+                href="#contact"
+                className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-lg"
+              >
+                联系我
+              </a>
+            </div>
           </div>
-          <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            vv
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            材料学研究者 / 高分子材料专家
-          </p>
-          <div className="flex gap-4">
-            <a
-              href="#about"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              了解更多
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              联系我
-            </a>
+
+          {/* 右侧头像 */}
+          <div className="relative w-full md:w-[400px] h-[400px] flex-shrink-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl"></div>
+            <div className="w-full h-full rounded-2xl overflow-hidden ring-4 ring-white/50 shadow-2xl relative">
+              <Image
+                src="/avatar.jpeg"
+                alt="vv的个人头像"
+                fill
+                className="object-cover"
+                priority
+              />
+              {/* 渐变蒙版 */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-500/20 to-transparent"></div>
+            </div>
           </div>
         </div>
       </section>
