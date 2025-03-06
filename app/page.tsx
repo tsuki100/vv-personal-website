@@ -4,9 +4,16 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="flex flex-col items-center text-center">
-          <div className="w-32 h-32 rounded-full overflow-hidden mb-8">
+      <section className="container mx-auto px-4 py-20 relative overflow-hidden">
+        {/* 装饰性背景元素 */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-10 left-1/4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+          <div className="absolute top-0 right-1/4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-1/3 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div className="flex flex-col items-center text-center relative">
+          <div className="w-32 h-32 rounded-full overflow-hidden mb-8 ring-4 ring-white shadow-lg">
             <Image
               src="/avatar.jpeg"
               alt="vv的个人头像"
@@ -25,13 +32,13 @@ export default function Home() {
           <div className="flex gap-4">
             <a
               href="#about"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               了解更多
             </a>
             <a
               href="#contact"
-              className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+              className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               联系我
             </a>
